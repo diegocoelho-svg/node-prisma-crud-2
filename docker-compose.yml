@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: nodeprismacrud_db
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: nodeuser
+      POSTGRES_PASSWORD: node123
+      POSTGRES_DB: nodecruddb
