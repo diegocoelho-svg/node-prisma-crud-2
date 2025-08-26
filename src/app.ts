@@ -1,7 +1,7 @@
 import express from 'express'
 import { PrismaClient } from '@prisma/client'
-import { AppError } from '../utils/AppError'
-import { errorHandling } from '../middleware/errorHandling'
+import { AppError } from '../src/utils/AppError'
+import { errorHandling } from '../src/middleware/errorHandling'
 
 const app = express()
 const prisma = new PrismaClient()
@@ -65,5 +65,4 @@ app.delete("/users/:id", async (request, response) => {
 })
 
 app.use(errorHandling)
-
 export { app }
